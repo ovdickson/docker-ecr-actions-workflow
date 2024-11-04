@@ -20,7 +20,7 @@ on:
         type: string
       backend_s3_bucket:
         description: Name of the S3bucket for Terraform backend
-        default: "terraform-backend-primary-region"
+        default: "sahil-terraform-state-bucket"
         type: string
       backend_iam_role:
         description: Name of the Terraform backend assumable IAM Role
@@ -35,11 +35,11 @@ on:
         type: string
       aws_region:
         description: Target AWS Region
-        default: "us-west-2"
+        default: "eu-west-1"
         type: string
       backend_dynamodb_table:
         description: DynamoDB table for State lock
-        default: "terraform-backend-ddb"
+        default: "sahil-terraform-table-locks"
         type: string
 
 # concurrency required to avoid terraform lock contention during ECR provisioning
